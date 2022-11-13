@@ -28,6 +28,8 @@ public class RadarImpl implements Radar{
 	 * @see sef.module8.activity.Radar#addContact(sef.module8.activity.RadarContact)
 	 */
 	public RadarContact addContact(RadarContact contact) {
+		if (contact.equals(null))
+			return null;
 		for (RadarContact radarContact : radarContacts) {
 		    if (radarContact.getContactID().equals(contact.getContactID()))
 		    {
